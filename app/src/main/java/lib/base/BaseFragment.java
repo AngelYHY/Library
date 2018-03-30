@@ -1,29 +1,25 @@
-package freestar.vip.library.base;
+package lib.base;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.net.UnknownHostException;
 
-import butterknife.ButterKnife;
 import freestar.freelibrary.base.BaseAppCompatFragment;
 import freestar.freelibrary.base.IPresenter;
 import freestar.freelibrary.base.IView;
 import freestar.freelibrary.util.netstatu.NetUtils;
-import freestar.vip.library.R;
-import freestar.vip.library.injector.component.DaggerFragmentComponent;
-import freestar.vip.library.injector.component.FragmentComponent;
-import freestar.vip.library.injector.module.FragmentModule;
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.ObservableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
+import lib.injector.component.DaggerFragmentComponent;
+import lib.injector.component.FragmentComponent;
+import lib.injector.module.FragmentModule;
 
 /**
  * Created by jact on 2016/station/16.
@@ -31,8 +27,8 @@ import io.reactivex.schedulers.Schedulers;
 public abstract class BaseFragment extends BaseAppCompatFragment implements IView {
     protected MaterialDialog dialog;
     protected FragmentComponent mFragmentComponent;
-    protected Toolbar mToolbar;
-//    protected EmptyView mEmptyView;
+//    protected Toolbar mToolbar;
+    //    protected EmptyView mEmptyView;
     public int page = 1;
     protected final static int PAGE_SIZE = 5;
 
@@ -45,13 +41,13 @@ public abstract class BaseFragment extends BaseAppCompatFragment implements IVie
                 .applicationComponent(((AppApplication) getActivity().getApplication()).getComponent())
                 .build();
 
-        mToolbar = ButterKnife.findById(getActivity(), R.id.common_toolbar);
-        if (null != mToolbar) {
-            mToolbar.setTitle("");
-            ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
-            ((AppCompatActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
-            ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
+//        mToolbar = ButterKnife.findById(getActivity(), R.id.common_toolbar);
+//        if (null != mToolbar) {
+//            mToolbar.setTitle("");
+//            ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
+//            ((AppCompatActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
+//            ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        }
     }
 
     @Override
@@ -197,7 +193,7 @@ public abstract class BaseFragment extends BaseAppCompatFragment implements IVie
 //                        mEmptyView.showError("");
 //                    }
                 } else {
-                    showMsg(mContext.getString(R.string.common_error_service));
+                    showMsg(mContext.getString(freestar.freelibrary.R.string.common_error_service));
                 }
             }
         }
@@ -244,7 +240,7 @@ public abstract class BaseFragment extends BaseAppCompatFragment implements IVie
 
     @Override
     public void showDialog() {
-        showDialog(getString(R.string.loading_default_text));
+        showDialog(getString(freestar.freelibrary.R.string.loading_default_text));
     }
 
     @Override

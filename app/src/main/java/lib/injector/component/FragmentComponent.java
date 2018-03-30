@@ -1,12 +1,12 @@
-package freestar.vip.library.injector.component;
+package lib.injector.component;
 
 import android.app.Activity;
 import android.content.Context;
 
 import dagger.Component;
-import freestar.vip.library.injector.ContextLife;
-import freestar.vip.library.injector.PerFragment;
-import freestar.vip.library.injector.module.FragmentModule;
+import lib.injector.ContextLife;
+import lib.injector.PerFragment;
+import lib.injector.module.FragmentModule;
 
 /**
  * 描述：

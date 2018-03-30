@@ -1,4 +1,4 @@
-package freestar.vip.library.base;
+package lib.base;
 
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -9,19 +9,17 @@ import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.net.UnknownHostException;
 
-import butterknife.ButterKnife;
 import freestar.freelibrary.base.BaseAppCompatActivity;
 import freestar.freelibrary.base.IView;
 import freestar.freelibrary.util.netstatu.NetUtils;
-import freestar.vip.library.R;
-import freestar.vip.library.injector.component.ActivityComponent;
-import freestar.vip.library.injector.component.DaggerActivityComponent;
-import freestar.vip.library.injector.module.ActivityModule;
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.ObservableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
+import lib.injector.component.ActivityComponent;
+import lib.injector.component.DaggerActivityComponent;
+import lib.injector.module.ActivityModule;
 
 
 /**
@@ -38,13 +36,13 @@ public abstract class BaseActivity extends BaseAppCompatActivity implements IVie
     @Override
     public void setContentView(int layoutResID) {
         super.setContentView(layoutResID);
-        mToolbar = findViewById(R.id.common_toolbar);
-        if (null != mToolbar) {
-            mToolbar.setTitle("");
-            setSupportActionBar(mToolbar);
-            getSupportActionBar().setHomeButtonEnabled(true);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
+//        mToolbar = findViewById(R.id.common_toolbar);
+//        if (null != mToolbar) {
+//            mToolbar.setTitle("");
+//            setSupportActionBar(mToolbar);
+//            getSupportActionBar().setHomeButtonEnabled(true);
+//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        }
     }
 
     @Override
@@ -153,7 +151,7 @@ public abstract class BaseActivity extends BaseAppCompatActivity implements IVie
 //                    mEmptyView.showError("网络异常");
 //                }
             } else {
-                showMsg(mContext.getString(R.string.common_error_service));
+                showMsg(mContext.getString(freestar.freelibrary.R.string.common_error_service));
                 Log.e("FreeStar", "BaseActivity→→→showException:" + ex.getMessage());
             }
         }
@@ -175,7 +173,7 @@ public abstract class BaseActivity extends BaseAppCompatActivity implements IVie
 
     @Override
     public void showDialog() {
-        showDialog(getString(R.string.loading_default_text));
+        showDialog(getString(freestar.freelibrary.R.string.loading_default_text));
     }
 
     @Override

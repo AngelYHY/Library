@@ -1,11 +1,11 @@
-package freestar.vip.library.injector.component;
+package lib.injector.component;
 
 import android.content.Context;
 
 import dagger.Component;
-import freestar.vip.library.injector.ContextLife;
-import freestar.vip.library.injector.PerService;
-import freestar.vip.library.injector.module.ServiceModule;
+import lib.injector.ContextLife;
+import lib.injector.PerService;
+import lib.injector.module.ServiceModule;
 
 /**
  * 描述：
@@ -22,6 +22,5 @@ public interface ServiceComponent {
 
     @ContextLife("Application")
     Context getApplicationContext();
-
 
 }

@@ -1,13 +1,13 @@
-package freestar.vip.library.base;
+package lib.base;
 
 import android.app.Application;
 
 import com.rey.material.app.ThemeManager;
 import com.squareup.leakcanary.LeakCanary;
 
-import freestar.vip.library.injector.component.ApplicationComponent;
-import freestar.vip.library.injector.component.DaggerApplicationComponent;
-import freestar.vip.library.injector.module.ApplicationModule;
+import lib.injector.component.ApplicationComponent;
+import lib.injector.component.DaggerApplicationComponent;
+import lib.injector.module.ApplicationModule;
 import vip.freestar.mylogger.Logger;
 
 /**

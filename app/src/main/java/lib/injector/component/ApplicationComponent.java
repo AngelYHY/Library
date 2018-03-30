@@ -1,4 +1,4 @@
-package freestar.vip.library.injector.component;
+package lib.injector.component;
 
 import android.app.Application;
 import android.content.Context;
@@ -6,9 +6,9 @@ import android.content.Context;
 import javax.inject.Singleton;
 
 import dagger.Component;
-import freestar.vip.library.core.RemoteService;
-import freestar.vip.library.injector.ContextLife;
-import freestar.vip.library.injector.module.ApplicationModule;
+import lib.RemoteService;
+import lib.injector.ContextLife;
+import lib.injector.module.ApplicationModule;
 
 /**
  * 描述：
@@ -22,8 +22,6 @@ public interface ApplicationComponent {
 
     @ContextLife("Application")
     Context getContext();
-
-
 
     Application injectApplication(Application application);
 

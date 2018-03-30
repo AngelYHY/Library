@@ -1,10 +1,10 @@
-package freestar.vip.library.injector;
+package lib.injector;
 
-import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import javax.inject.Qualifier;
+import javax.inject.Scope;
+
 
 /**
  * 描述：
@@ -12,10 +12,7 @@ import javax.inject.Qualifier;
  * 日期：2017/10/15 0015
  * github：
  */
-
-@Qualifier
-@Documented
+@Scope
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ContextLife {
-    String value() default "Application";
+public @interface PerFragment {
 }

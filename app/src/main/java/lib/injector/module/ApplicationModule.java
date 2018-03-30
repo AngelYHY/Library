@@ -1,4 +1,4 @@
-package freestar.vip.library.injector.module;
+package lib.injector.module;
 
 import android.app.Application;
 import android.content.Context;
@@ -9,8 +9,8 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import freestar.vip.library.core.RemoteService;
-import freestar.vip.library.injector.ContextLife;
+import lib.RemoteService;
+import lib.injector.ContextLife;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -59,7 +59,6 @@ public class ApplicationModule {
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
-//        retrofit.addHeader("Content-Type", "application/json");
         return retrofit.create(RemoteService.class);
     }
 }

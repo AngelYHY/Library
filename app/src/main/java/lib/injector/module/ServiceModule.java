@@ -1,12 +1,12 @@
-package freestar.vip.library.injector.module;
+package lib.injector.module;
 
 import android.app.Service;
 import android.content.Context;
 
 import dagger.Module;
 import dagger.Provides;
-import freestar.vip.library.injector.ContextLife;
-import freestar.vip.library.injector.PerService;
+import lib.injector.ContextLife;
+import lib.injector.PerService;
 
 /**
  * 描述：

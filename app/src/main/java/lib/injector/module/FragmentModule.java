@@ -1,4 +1,4 @@
-package freestar.vip.library.injector.module;
+package lib.injector.module;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,8 +6,8 @@ import android.support.v4.app.Fragment;
 
 import dagger.Module;
 import dagger.Provides;
-import freestar.vip.library.injector.ContextLife;
-import freestar.vip.library.injector.PerFragment;
+import lib.injector.ContextLife;
+import lib.injector.PerFragment;
 
 /**
  * 描述：

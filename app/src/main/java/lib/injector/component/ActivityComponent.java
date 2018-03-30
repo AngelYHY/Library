@@ -1,12 +1,12 @@
-package freestar.vip.library.injector.component;
+package lib.injector.component;
 
 import android.app.Activity;
 import android.content.Context;
 
 import dagger.Component;
-import freestar.vip.library.injector.ContextLife;
-import freestar.vip.library.injector.PerActivity;
-import freestar.vip.library.injector.module.ActivityModule;
+import lib.injector.ContextLife;
+import lib.injector.PerActivity;
+import lib.injector.module.ActivityModule;
 
 /**
  * 描述：
@@ -23,7 +23,6 @@ public interface ActivityComponent {
 
     @ContextLife("Application")
     Context getApplicationContext();
-
 
     Activity getActivity();
 

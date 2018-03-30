@@ -1,4 +1,4 @@
-package freestar.vip.library.core;
+package lib;
 
 
 /**

@@ -5,7 +5,7 @@ import android.content.pm.PackageManager;
 import android.widget.TextView;
 
 import butterknife.BindView;
-import freestar.vip.library.base.BaseActivity;
+import lib.base.BaseActivity;
 import vip.freestar.mylogger.Logger;
 
 public class MainActivity extends BaseActivity {

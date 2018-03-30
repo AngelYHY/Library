@@ -1,0 +1,142 @@
+ext {
+    minSdk = 15
+    targetSdk = 26
+    compileSdk = 26
+    vcode = 1
+    vname = '1.0'
+
+//    sourceCompatibilityVersion = JavaVersion.VERSION_1_8
+//    targetCompatibilityVersion = JavaVersion.VERSION_1_8
+
+    supportVersion = '26.1.0'
+
+    // App dependencies
+    supportLibraryVersion = '26.1.0'
+    guavaVersion = '18.0'
+    junitVersion = '4.12'
+    mockitoVersion = '1.10.19'
+    powerMockito = '1.6.2'
+    hamcrestVersion = '1.3'
+    runnerVersion = '0.5'
+    rulesVersion = '0.5'
+    espressoVersion = '2.2.2'
+
+    okhttp3Version = '3.6.0'
+    rxJavaVersion = '2.0.7'
+    rxAndroidVersion = '2.0.1'
+    retrofitVersion = '2.2.0'
+    rxlifeVersion = '2.0.1'
+    brvahVersion = '2.9.28'
+    gsonVersion = '2.8.0'
+    glideVersion = '3.7.0'
+    getuiVersion = '2.10.2.0'
+    daggerVersion = '2.12'
+    butterknifeVersion = '8.8.1'
+    rxpermissionVersion = '0.9.4@aar'
+    daggerVersion = '2.12'
+    hotfixVersion = '3.1.2'
+
+    dep = [
+            androidPlugin           : 'com.android.tools.build:gradle:2.1.3',
+            okhttp                  : 'com.squareup.okhttp:okhttp:2.7.1',
+            mockWebServer           : "com.squareup.okhttp3:mockwebserver:$okhttp3Version",
+            pollexor                : 'com.squareup:pollexor:2.0.0',
+            supportV4               : "com.android.support:support-v4:$supportVersion",
+            supportAnnotations      : "com.android.support:support-annotations:$supportVersion",
+            junit                   : 'junit:junit:4.10',
+            fest                    : 'org.easytesting:fest-assert-core:2.0M10',
+            festAndroid             : 'com.squareup:fest-android:1.0.6',
+            robolectric             : 'org.robolectric:robolectric:3.1',
+            mockito                 : 'org.mockito:mockito-core:1.9.5',
+            // Android support 相关库
+            "appcompat-v7"          : "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion",
+            "cardview-v7"           : "com.android.support:cardview-v7:$rootProject.supportLibraryVersion",
+            "design"                : "com.android.support:design:$rootProject.supportLibraryVersion",
+            "recyclerview-v7"       : "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion",
+
+            "support-v4"            : "com.android.support:support-v4:$rootProject.supportLibraryVersion",
+            "percent"               : "com.android.support:percent:$rootProject.supportVersion",
+
+//            maven {
+//                url "https://jitpack.io"
+//            }
+            //rv adapter
+            "brvah"                 : "com.github.CymChad:BaseRecyclerViewAdapterHelper:$rootProject.brvahVersion",
+
+            // 网络 retrofit
+            "retrofit"              : "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion",
+            "converter-gson"        : "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion",
+            "adapter-rxjava"        : "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofitVersion",
+
+            "okhttp3"               : "com.squareup.okhttp3:okhttp:$okhttp3Version",
+            "okhttp3:interceptor"   : "com.squareup.okhttp3:logging-interceptor:$okhttp3Version",
+
+            //rxjava
+            "rxjava"                : "io.reactivex.rxjava2:rxjava:$rootProject.rxJavaVersion",
+            "rxandroid"             : "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroidVersion",
+
+            // 生命周期
+            "rxlife"                : "com.trello.rxlifecycle2:rxlifecycle:$rootProject.rxlifeVersion",
+            // If you want pre-written Activities and Fragments you can subclass as providers
+            "rxlife-components"     : "com.trello.rxlifecycle2:rxlifecycle-components:$rootProject.rxlifeVersion",
+
+            // 图片加载
+            "picasso"               : 'com.squareup.picasso:picasso:2.5.2',
+            "glide"                 : "com.github.bumptech.glide:glide:$rootProject.glideVersion",
+            "glide:okhttp3"         : 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar',
+
+            "gson"                  : "com.google.code.gson:gson:$rootProject.gsonVersion",
+
+            // 事件总线
+            "androideventbus"       : 'org.simple:androideventbus:1.0.5.1',
+
+            // 数据库
+            "litepal"               : 'org.litepal.android:core:1.3.2',
+
+            "fab"                   : 'com.github.clans:fab:1.6.4',
+            // 动画兼容
+            "nineoldandroids"       : 'com.nineoldandroids:library:2.4.0',
+            // 下拉刷新
+            "refreshlayout"         : 'cn.bingoogolapple:bga-refreshlayout:1.1.6@aar',
+            "logger"                : 'com.orhanobut:logger:1.15',
+
+            "xrecyclerview"         : 'com.jcodecraeer:xrecyclerview:1.3.2',
+            "getui"                 : "com.getui:sdk:$rootProject.getuiVersion",
+
+            "butterknife"           : "com.jakewharton:butterknife:$rootProject.butterknifeVersion",
+//            前面用 annotationProcessor
+            "butterknife-annotation": "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion",
+
+            "rxpermissions"         : "com.tbruyelle.rxpermissions2:rxpermissions:$rootProject.rxpermissionVersion",
+
+//            maven {
+//                url "http://maven.aliyun.com/nexus/content/repositories/releases"
+//            }
+            //热修复
+            "hotfix"                : "com.aliyun.ams:alicloud-android-hotfix:$rootProject.hotfixVersion",
+
+            "material-dialogs"      : 'com.afollestad.material-dialogs:core:0.8.5.9',
+
+            "material"              : 'com.github.rey5137:material:1.2.4',
+
+            // dagger2  前面2个使用 annotationProcessor
+            "dagger-compiler"       : "com.google.dagger:dagger-compiler:$rootProject.daggerVersion",
+            "dagger-processor"      : "com.google.dagger:dagger-android-processor:$rootProject.daggerVersion",
+
+            "dagger-android"        : "com.google.dagger:dagger-android:$rootProject.daggerVersion",
+            "dagger-support"        : "com.google.dagger:dagger-android-support:$rootProject.daggerVersion",
+
+//            annotationProcessor rootProject.ext.dep["dagger-compiler"]
+//            annotationProcessor rootProject.ext.dep["dagger-processor"]
+//            implementation rootProject.ext.dep["dagger-android"]
+//            implementation rootProject.ext.dep["dagger-support"]
+
+    ]
+
+//    annotationProcessor 'com.google.dagger:dagger-compiler:2.11' //一定要添加dagger2的annotationProcessor！
+//    compile 'com.google.dagger:dagger-android:2.11'
+//    compile 'com.google.dagger:dagger-android-support:2.11' // if you use the support libraries
+//    annotationProcessor 'com.google.dagger:dagger-android-processor:2.11
+
+    isCi = "true".equals(System.getenv('CI'))
+}

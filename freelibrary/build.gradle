@@ -1,0 +1,61 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdk
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdk
+        targetSdkVersion rootProject.ext.targetSdk
+        versionCode rootProject.ext.vcode
+        versionName rootProject.ext.vname
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            postprocessing {
+                removeUnusedCode false
+                removeUnusedResources false
+                obfuscate false
+                optimizeCode false
+                proguardFile 'proguard-rules.pro'
+            }
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api rootProject.ext.dep["appcompat-v7"]
+    api rootProject.ext.dep["recyclerview-v7"]
+    api rootProject.ext.dep["design"]
+    api rootProject.ext.dep["brvah"]
+
+    api rootProject.ext.dep["glide"]
+    api rootProject.ext.dep["cardview-v7"]
+    api rootProject.ext.dep["material-dialogs"]
+    api rootProject.ext.dep["material"]
+
+    api rootProject.ext.dep["retrofit"]
+    api rootProject.ext.dep["converter-gson"]
+    api rootProject.ext.dep["adapter-rxjava"]
+    api rootProject.ext.dep["rxjava"]
+    api rootProject.ext.dep["rxandroid"]
+
+    api rootProject.ext.dep["rxlife"]
+    api rootProject.ext.dep["rxlife-components"]
+
+    api rootProject.ext.dep["rxpermissions"]
+
+    api 'com.github.AngelYHY:FreeLogger:1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    api rootProject.ext.dep["butterknife"]
+    annotationProcessor rootProject.ext.dep["butterknife-annotation"]
+
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="pv_circular">
+        <item>@style/LightCircularProgressView</item>
+        <item>@style/DarkCircularProgressView</item>
+    </array>
+    <array name="checkbox">
+        <item>@style/LightCheckBoxDrawable</item>
+        <item>@style/DarkCheckBoxDrawable</item>
+    </array>
+    <array name="white_checkbox">
+        <item>@style/LightBlueCheckBoxDrawable</item>
+        <item>@style/DarkCheckBoxDrawable</item>
+    </array>
+    <array name="black_checkbox">
+        <item>@style/LightBlueCheckBoxDrawable</item>
+        <item>@style/DarkCheckBoxDrawable</item>
+    </array>
+    <array name="radio_button">
+        <item>@style/LightRadioButtonDrawable</item>
+        <item>@style/DarkRadioButtonDrawable</item>
+    </array>
+    <array name="spinner">
+        <item>@style/LightSpinner</item>
+        <item>@style/DarkSpinner</item>
+    </array>
+
+    <array name="spinner_item">
+        <item>@style/LightSpinnerItem</item>
+        <item>@style/DarkSpinnerItem</item>
+    </array>
+
+    <array name="slider">
+        <item>@style/LightSlider</item>
+        <item>@style/DarkSlider</item>
+    </array>
+
+</resources>
